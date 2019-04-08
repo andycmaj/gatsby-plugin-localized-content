@@ -60,4 +60,7 @@ typings/
 # next.js build output
 .next
 
-dist/
+/getStringsWithFallback.js
+/index.js
+/withTranslations.js
+/I18n.js

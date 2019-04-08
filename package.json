@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-localized-content",
-  "version": "0.0.1",
-  "main": "dist/index.js",
+  "version": "0.0.3",
+  "main": "index.js",
   "keywords": [
     "gatsby",
     "i18n",
@@ -12,10 +12,10 @@
     "url": "https://github.com/andycmaj/gatsby-plugin-localized-content"
   },
   "dependencies": {
-    "gatsby-link": "^2.0.16",
-    "ramda": "^0.26.1",
     "@babel/runtime": "^7.4.3",
+    "gatsby-link": "^2.0.16",
     "i18next": "15.0.9",
+    "ramda": "^0.26.1",
     "react-i18next": "10.6.2"
   },
   "peerDependencies": {
@@ -24,14 +24,14 @@
   "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
-    "babel-preset-gatsby-package": "^0.1.4",
-    "babel-preset-env": "^1.7.0",
     "babel-plugin-ramda": "^2.0.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0"
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-gatsby-package": "^0.1.4"
   },
   "scripts": {
-    "build": "babel src --out-dir dist --ignore __tests__",
-    "build:watch": "babel -w src --out-dir dist --ignore __tests__",
+    "build": "babel src --out-dir . --ignore __tests__",
+    "build:watch": "babel -w src --out-dir . --ignore __tests__",
     "prepare": "yarn run build"
   }
 }

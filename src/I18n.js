@@ -61,17 +61,4 @@ class I18n extends Component {
   }
 }
 
-const stringsQuery = graphql`
-  query {
-    allLocalizedStrings {
-      ...Translations
-    }
-  }
-`;
-
-export default data => (
-  <StaticQuery
-    query={stringsQuery}
-    render={props => <I18n {...data} {...props} />}
-  />
-);
+export default I18n;
