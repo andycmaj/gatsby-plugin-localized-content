@@ -64,3 +64,4 @@ typings/
 /index.js
 /withTranslations.js
 /I18n.js
+/LanguageSwitcher.js

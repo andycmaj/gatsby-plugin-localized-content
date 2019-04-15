@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import i18next from 'i18next';
 import { I18nextProvider } from 'react-i18next';
 import { I18nProvider } from 'gatsby-i18n';
-import { graphql, StaticQuery } from 'gatsby';
 
 const init = ({ fallbackLng, debug }) => {
   i18next.init({
