@@ -2,3 +2,8 @@
 
 # gatsby-plugin-localized-content
 
+> Inspired by https://github.com/ikhudo/gatsby-i18n-plugin
+
+This plugin provides a straightforward way to localize your CMS-managed string dictionaries and markdown pages.
+
+It integrates `react-i18next` and gatsby [markdown-enabled yaml values](https://github.com/supernotes/gatsby-transformer-yaml-plus), in a way that makes it easy to translate and consume CMS-managed strings.
