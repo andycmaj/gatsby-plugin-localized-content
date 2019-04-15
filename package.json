@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-localized-content",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "index.js",
   "keywords": [
     "gatsby",
@@ -14,7 +14,7 @@
   "dependencies": {
     "@babel/runtime": "^7.4.3",
     "gatsby-link": "^2.0.16",
-    "i18next": "15.0.9",
+    "i18next": "15.0.7",
     "ramda": "^0.26.1",
     "react-i18next": "10.7.0"
   },
