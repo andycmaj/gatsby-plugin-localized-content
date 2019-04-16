@@ -1,29 +1,46 @@
 import React from 'react';
+import styled from '@emotion/styled';
 import { I18nConsumer } from 'gatsby-i18n';
 import withTranslations from './withTranslations';
-import { compose, withState } from 'recompose';
+import { compose, lifecycle, withHandlers } from 'recompose';
+import { autoDetectLanguage } from './autoDetectLang';
 
-const Switcher = ({ className, t, currentLng, originalPath }) => {
+const LanguageLink = styled.a``;
+
+const Switcher = ({ t, lng, className, getLngPath }) => {
   // HACK for initial change not working
-  const newLng = currentLng === 'es' ? 'en' : 'es';
-  const pathLng = newLng === 'en' ? '' : `/${newLng}`;
-  const newUrl = `${pathLng}${originalPath}`;
+  const newLng = lng === 'es' ? 'en' : 'es';
+  const newUrl = getLngPath(newLng);
 
   return (
-    <a className={`link ${className}`} href={newUrl}>
-      <span className="normal">
-        {currentLng === 'es' ? t('inEnglish') : t('enEspanol')}
-      </span>
-      <span className="tiny">
-        {currentLng === 'es' ? t('inEnglishTiny') : t('enEspanolTiny')}
-      </span>
-    </a>
+    <LanguageLink className={className} href={newUrl}>
+      {lng === 'es' ? t('inEnglish') : t('enEspanol')}
+    </LanguageLink>
   );
 };
 
 const Container = compose(
-  withState('currentLng', 'setCurrentLng', ({ lng }) => lng),
-  withTranslations('strings')
+  withTranslations('strings'),
+  withHandlers({
+    getLngPath: ({ originalPath }) => newLng => {
+      let originalUrl = originalPath;
+      if (typeof window !== 'undefined') {
+        originalUrl.concat(window.location.search);
+      }
+      return newLng === 'en' ? `${originalUrl}` : `/${newLng}${originalUrl}`;
+    },
+  }),
+  lifecycle({
+    componentDidMount() {
+      this.props.shouldAutoDetect &&
+        autoDetectLanguage(
+          this.props.lng,
+          this.props.defaultLng,
+          this.props.availableLngs,
+          lang => this.props.getLngPath(lang)
+        );
+    },
+  })
 )(Switcher);
 
 export default props => (
