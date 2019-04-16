@@ -2359,10 +2359,10 @@ html-parse-stringify2@2.0.1:
   dependencies:
     void-elements "^2.0.1"
 
-i18next@15.0.9:
-  version "15.0.9"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-15.0.9.tgz#42536407a921bb5a8535a4c090a26f16827a1884"
-  integrity sha512-IdVj7DqErUuMbGuj2dFT431T7zKlmDci63eae6pNA/bMwgBZKT74/KnwHXE0WH7ivo2EV/LNme4pP4Yw6vB79w==
+i18next@15.0.7:
+  version "15.0.7"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-15.0.7.tgz#2f61240c8b2b6656233217a8eee07a09a5707fea"
+  integrity sha512-KCSmTOE0nsku53cI0sSBY21ftXhsAfCjcNQBx54Y0AxcTxSs+v+qGFQ38ab+vi6F4NZEm8JupO36vlWoeF47cA==
   dependencies:
     "@babel/runtime" "^7.3.1"
 
@@ -2703,6 +2703,11 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
+
+langtag-utils@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/langtag-utils/-/langtag-utils-1.1.2.tgz#eb9a818e2ffec68ff13ab0a9dbcd3c3e8694ebf5"
+  integrity sha512-pmolraWjn9IRbuGqksEHadqF6HqcBnDc/D4aVTXDMwUA+/uGlm7PbmNqc3Nh/JqIHv2HZvOiVPRnP16Xs5Dhsw==
 
 levn@^0.3.0, levn@~0.3.0:
   version "0.3.0"
